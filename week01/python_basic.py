@@ -246,3 +246,30 @@ print(s2)
 # 원소 여러 개 추가
 s2.update([6, 7, 8, 9, 10])
 print(s2)
+
+# 특정 원소 제거
+s2.remove(7)
+print(s2)
+
+s2 = set([1, 2, 3, 4, 5, 6, 3, 1, 6])
+print(s2)
+
+# 비교 연산자
+x = 3
+y = 2
+print(x == y)
+print(x != y)
+print(x >= y)
+
+# 조건의 연결
+money = 1300
+if money >= 1200 and money < 3500:
+    print('버스를 탈 수 있습니다.')
+
+# 그룹 자료형의 원소인지 검사하기
+print(1 in [1, 2, 3])
+print(x in [1, 2, 3])
+print(x not in [1, 2, 3])
+print('a' in ['a', 'b', 'c', 'd'])
+print('i' not in 'Python')
+
