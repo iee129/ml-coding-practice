@@ -293,4 +293,13 @@ for score in [90, 25, 67, 45, 93]:
     number += 1
 
     if score > 60:
-        print("")
+        print("%d번 학생은 합격입니다." % number)
+    else:
+        print("%d번 학생은 불합격입니다." % number)
+
+# while 문
+i = 0
+while i < 5:
+    i += 1
+    print('*' * i)
+
