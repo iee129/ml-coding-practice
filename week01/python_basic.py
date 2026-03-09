@@ -58,3 +58,22 @@ print(a.index('y'))
 b = ","
 c = b.join('Abcd')
 print(c)
+
+# 대소문자 변환
+print(a.upper())
+print(a.lower())
+
+# 공백 제거
+d = "              py          "
+print(d.lstrip())
+print(d.rstrip())
+print(d.strip())
+
+# 문자열 수정 (불가능)
+a = "Pithon"
+# a[1] = 'y'    # 오류 발생
+
+# 문자열 바꾸기
+a = "Python is difficult."
+print(a.replace("difficult", "funny"))
+print(a)
