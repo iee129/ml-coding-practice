@@ -463,4 +463,4 @@ data
 
 # with open() as 파일 객체
 with open('example.txt', 'r') as f:
-    data = f.read()
+    
