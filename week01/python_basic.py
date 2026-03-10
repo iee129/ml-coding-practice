@@ -437,3 +437,30 @@ f.close()
 # 파일 모드 'r' - readline()
 f = open('example.txt', 'r')
 
+
+while True:
+    line = f.readline()
+    if not line: break
+    print(line)
+
+f.close()
+
+# 파일 모드 'r' - readlines()
+f = open('example.txt', 'r')
+lines = f.readlines()
+print(lines)
+
+for line in lines:
+    print(line)
+
+f.close()
+
+# 파일 모드 'r' - read()
+f = open('example.txt', 'r')
+data = f.read()
+f.close()
+data
+
+# with open() as 파일 객체
+with open('example.txt', 'r') as f:
+    data = f.read()
