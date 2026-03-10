@@ -410,8 +410,8 @@ urllib.request.Request('http://www.sunmoon.ac.kr')
 import pandas 
 pandas.DataFrame()
 
-from datatime import datatime
-datatime.now()
+from datetime import datetime
+datetime.now()
 
 # 파일 객체 생성
 f = open('example.txt', 'w')
