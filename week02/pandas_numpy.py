@@ -69,5 +69,15 @@ data = {
     'comment_length': [150, 200, 50, 300, 120, 180, 75, 160],
     'likes': [25, 30, 10, 45, 20, 35, 5, 28],
     'is_spam': [False, False, True, False, False, True, False, False],
-    'has_image': [True, False, True, True, False,]
+    'has_image': [True, False, True, True, False, False, True, True]
 }
+df = pd.DataFrame(data)
+print(df.head())
+
+# 필터링 조건 설정
+condition = (
+    (df['comment_length'] >= 100) &
+    (df['likes'] >= 20) &
+    (~df['is_spam']) &
+    
+)
