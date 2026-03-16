@@ -83,4 +83,9 @@ condition = (
 )
 
 # 조건을 만족하는 행들 필터링
-lllllllllllllllllllllllllllllllllllllllllllllllllll
+winner_df = df[condition]
+print(winner_df)
+
+print(sample_df.reset_index())
+
+print(sample_df.reset_index(drop=True))        # 기존 인덱스는 제거하기
