@@ -81,3 +81,6 @@ condition = (
     (~df['is_spam']) &
     (df['has_image'])
 )
+
+# 조건을 만족하는 행들 필터링
+lllllllllllllllllllllllllllllllllllllllllllllllllll
