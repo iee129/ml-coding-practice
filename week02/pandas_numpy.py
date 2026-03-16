@@ -88,4 +88,81 @@ print(winner_df)
 
 print(sample_df.reset_index())
 
-print(sample_df.reset_index(drop=True))        # 기존 인덱스는 제거하기
+print(sample_df.reset_index(drop=True))          # 기존 인덱스는 제거하기
+
+print(sample_df.set_index('var_1'))
+
+
+print(sample_df.describe())
+print(sample_df.std())
+print(sample_df.agg(['count','mean', 'std', 'min', 'max']))
+
+file_url = 'https://media.githubusercontent.com/media/musthave-ML10/data_source/main/iris.csv'
+iris = pd.read_csv(file_url)
+
+print(iris.head())
+
+print(iris.groupby('class').std())
+
+print(iris.drop('class', axis=1).agg(['sum','mean', 'std']))
+
+# print(iris.agg(['sum','mean', 'std']))    # class 컬럼으로 인해 에러 발생
+
+
+print(iris['class'].unique())
+print(iris['class'].nunique())
+print(iris['class'].value_counts())
+
+# 예제 데이터 생성
+data = {
+    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'age': [25, 30, 35, 28, 40],
+    'salary': [70000.00, 80000.00, 90000.00, 60000.00, 95000.00]
+}
+
+# DataFrame 생성
+df = pd.DataFrame(data)
+print(df.head())
+
+# 나이가 30 이상인 직원의 이름과 급여 반환
+result = df[df['age'] >= 30][['name', 'salary']]
+print(result)
+
+# 예제 데이터 생성
+data = {
+    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'math': [88, 92, 85, 95, 90],
+    'science': [80, 85, 88, 92, 85],
+    'english': [90, 87, 85, 88, 92]
+}
+
+# DataFrame 생성
+df = pd.DataFrame(dat)
+print(df.head())
+
+# 개인별 과목 점수의 평균값 계산 (axis=1)
+df['average'] = df[['math', 'science', 'english']].mean(axis=1)
+print(df)
+
+# 이름과 평균값만을 포함하는 새로운 데이터프레임 생성
+average_df = df[['name', 'average']]
+print(average_df)
+
+# 2.2 넘파이
+import numpy as np
+
+print(np.array([1,2,3]))
+
+print(np.array([[1,2,3],
+                [4,5,6],
+                [7,8,9]]))
+
+print(np.array([[[1,2,3],
+                [4,5,6],
+                [7,8,9]],
+                [[1,2,3],
+                [4,5,6],
+                [7,8,9]],
+                [[1,2,3],
+                [4,5,6],
+                [7,8,9]]]))
