@@ -10,3 +10,8 @@ sample.info()
 sample.describe()
 
 sample_dic = {'name': ['John', 'Ann', 'Kevin'], 'age': [23,22,21]}
+a = pd.DataFrame(sample_dic)
+
+a.info()
+
+pd.DataFrame([[1,2,]],[3,4])
