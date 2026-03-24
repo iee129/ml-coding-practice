@@ -259,6 +259,18 @@ plt.legend()
 plt.savefig('Figure12.png')
 plt.close()
 
+## **개별 서브플롯을 하나씩 생성하기**
+plt.subplot(2, 2, 1)
+plt.plot([1, 2, 3])
+
+plt.subplot(2, 2, 2)
+plt.plot([4, 5, 6])
+
+plt.subplot(2, 2, 3)
+plt.plot([7, 8, 9])
+
+pl
+
 ## **타이타닉 데이터셋으로 개별 서브플롯 하나씩 그리기**
 
 # Survived가 0이면 사망자률, 1이면 생존자률 나타냄
