@@ -71,3 +71,19 @@ plt.legend(bars, ['Survived - Female', 'Survived - Male'], loc='upper right')
 
 # 차이 강조를 위해 수평선 추가
 plt.axvline(x=survived_counts['male'], color='gray', linestyle='--', linewidth=1)
+
+# 생존자 수 표시
+for i, value in enumerate(survived_counts):
+  plt.text(value + 1, i, str(value), ha='left', va='center')
+
+plt.savefig('Figure-03.png')
+plt.close()
+
+"""### **산점도 그래프 : 나이와 요금, 생존 여부 확인하기**"""
+
+print(titanic.info(), '\n')
+
+# 결축치 처리
+titanic = titanic.dropna(subset=['Age', 'Fare', 'Survived'])
+print(titanic.info(), '\n')
+
