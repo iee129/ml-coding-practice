@@ -245,3 +245,8 @@ print(fare_std)
 """* 에러바는 데이터의 표준 편차를 나타내는 경우에는 길이가 길수록 해당 그룹의 데이터가 퍼져 있음을 의미"""
 
 # 에러바로 요금의 평균과 표준 편차 표현
+plt.figure(figsize=(10, 6))
+
+# 에러바 생성
+plt.errorbar(fare_means.index, fare_means, yerr=fare_std, fmt='o',
+             capsize=5, s)
