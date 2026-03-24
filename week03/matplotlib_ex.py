@@ -171,3 +171,47 @@ print(survived_counts)
 plt.figure(figsize=(10, 6))
 
 # 나이대별 생존자
+plt.fill_between(survived_counts.index.astype(str), survived_counts[1],
+                 color='purple', alpha=0.9, label='Survived')
+
+# 나이대별 사망자
+plt.fill_between(survived_counts.index.astype(str), survived_counts[0],
+                 color='hotpink', alpha=0.9, label='Not Survived')
+
+plt.title('Survival by Age Groups on the Titanic')
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True)
+plt.savefig('Figure08.png')
+plt.close()
+
+## **박스 플롯 : 승객 나이의 데이터 분포, 중앙값, 이상치 살펴보기**
+
+# 결측치 처리
+titanic = titanic.dropna(subset=['Age'])
+print(titanic.info())
+
+# 승객 등급에 따른 나이의 박스 플롯
+plt.boxplot([titanic[titanic['Pclass'] == 1]['Age'],
+             titanic[titanic['Pclass'] == 2]['Age'],
+             titanic[titanic['Pclass'] == 3]['Age']],
+            labels=['1st Class', '2nd Class', '3rd Class'])
+
+plt.title('Box Plot for Age by Pclass')
+plt.xlabel('Pclass')
+plt.ylabel('Age')
+plt.savefig('Figure09.png')
+plt.close()
+
+"""### **바이올린 플롯 : 승객 등급에 따른 나이 분포 표시하기**"""
+
+# 결측치 처리
+titanic['Age'] = titanic['Age'].fillna(titanic['Age'].mean())
+print(titanic.info())
+
+# 바이올린 플롯 그리기
+plt.figure(figsize=(10, 6))
+
+# showmeans=False는
