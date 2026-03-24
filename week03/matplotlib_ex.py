@@ -23,7 +23,7 @@ pclass_survival_mean
 import matplotlib.pyplot as plt
 
 # 선 그래프 그리기
-plt.plot(pclass_survival_mean['Pclass'], pclass_survival_mean['Servived'],
+plt.plot(pclass_survival_mean['Pclass'], pclass_survival_mean['Survived'],
          marker='o', linestyle='-', color='violet')
 plt.title('Survival Rate Variation by Passenger Classes')
 plt.xlabel('Pclass')
