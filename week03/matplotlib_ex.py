@@ -29,4 +29,5 @@ plt.title('Survival Rate Variation by Passenger Classes')
 plt.xlabel('Pclass')
 plt.ylabel('Survival Rate')
 plt.xticks([1, 2, 3])
+plt.grid(True)
 plt.
