@@ -16,4 +16,7 @@ print(titanic.info())
 """### **선 그래프 : 객실 등급에 따른 생존율 조사하기**"""
 
 # 객실 등급에 따른 생존자와 사망자의 평균 계산
-pclass_survival_mean = titanic.groupby('Pclass')['Survived'].mean().reset_index
+pclass_survival_mean = titanic.groupby('Pclass')['Survived'].mean().reset_index()
+pclass_survival_mean
+
+# 맷플롯립 라이브러리
