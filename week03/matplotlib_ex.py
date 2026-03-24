@@ -256,4 +256,7 @@ plt.xlabel('Parch')
 plt.ylabel('Fare')
 plt.xticks(fare_means.index)
 plt.legend()
-plt.savefig('Figure11.')
+plt.savefig('Figure12.png')
+plt.close()
+
+## **타이타닉 
