@@ -366,3 +366,16 @@ plt.close()
 
 # 각 부모와 자녀의 수에 따른 생존자와 사망자 수 계산
 parch_counts = titanic.groupby('Parch')['Survived'].value_counts().unstack().fillna(0)
+print(parch_counts)
+
+# x, y값 설정
+x = parch_counts.index.astype(str) # 데이터프레임의 인덱스를 문자열로 변환
+y1 = parch_counts[0].values # 사망자
+y2 = parch_counts[1].values # 생존자
+
+# plt.subplot() 함수를 사용하여 그래프 생성
+# figure와 서브플롯 생성
+fig, ax1 = plt.subplots()
+
+# 첫 번쨰 그래프 설정 (선 그래프)
+ax1.plot(x, y1, '-s',
