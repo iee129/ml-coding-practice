@@ -344,3 +344,25 @@ fig, axes = plt.subplots(2, 1, figsize=(10, 10))
 
 # 첫 번째 서브플롯 설정(선 그래프)
 axes[0].plot(x, y1, '-o', color='indigo', markersize=7, linewidth=3, alpha=0.7, label='Not Survived')
+axes[0].set_xlabel('Parch')
+axes[0].set_ylabel('Not Survived Count', color='indigo')
+axes[0].tick_params(axis='y', labelcolor='indigo')
+axes[0].legend(loc='upper right')
+
+# 두 번째 서브플롯 설정 (막대 그래프)
+axes[1].bar(x, y2, color='deeppink', alpha=0.7, width=0.5, label='Survived')
+axes[1].set_xlabel('Parch')
+axes[1].set_ylabel('Survived Count', color='deeppink')
+axes[1].tick_params(axis='y', labelcolor='deeppink')
+axes[1].legend(loc='upper right')
+
+# 제목 설정
+fig.suptitle('Survival Analysis by Number of Parents/Children (Parch) on the Titanic')
+fig.tight_layout()
+plt.savefig('Figure15.png')
+plt.close()
+
+## **하나의 서브플롯에 여러 그래프 그리기**
+
+# 각 부모와 자녀의 수에 따른 생존자와 사망자 수 계산
+parch_counts = titanic.groupby('Parch')['Survived'].value_counts().unstack().fillna(0)
