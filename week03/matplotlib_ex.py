@@ -256,7 +256,7 @@ plt.xlabel('Parch')
 plt.ylabel('Fare')
 plt.xticks(fare_means.index)
 plt.legend()
-plt.savefig('Figure12.png')
+plt.savefig('Figure11.png')
 plt.close()
 
 ## **개별 서브플롯을 하나씩 생성하기**
@@ -271,7 +271,7 @@ plt.plot([7, 8, 9])
 
 plt.subplot(2, 2, 4)
 plt.plot([10, 11, 12])
-plt.savefig('Figure11.png')
+plt.savefig('Figure12.png')
 plt.close()
 
 ## **타이타닉 데이터셋으로 개별 서브플롯 하나씩 그리기**
