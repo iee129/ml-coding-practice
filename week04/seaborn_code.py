@@ -3,7 +3,7 @@
 # 시본 라이브러리 불러오기
 import seaborn as sns
 
-# **팁(tips) 데이터셋 불러오기*
+# **팁(tips) 데이터셋 불러오기**
 tips = sns.load_dataset('tips')
 print(tips.head())
 
@@ -71,7 +71,7 @@ sns.histplot(tips['tip'], bins=30, kde=True, color='skyblue')
 plt.title('Histogram with KDE for Tips')
 plt.savefig('./week04/Seaborn_Figure04.jpg')
 
-# **조인트 그래프*
+# **조인트 그래프**
 # joinplot( ) 그리기
 sns.jointplot(x='size', y='tip', data=tips, kind='scatter')
 plt.savefig('./week04/Seaborn_Figure05.jpg')
