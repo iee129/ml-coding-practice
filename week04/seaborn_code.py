@@ -25,8 +25,8 @@ sns.stripplot(x='day', y='tip', hue='sex', data=tips, alpha=0.7 , ax=ax1)
 sns.swarmplot(x='day', y='tip', hue='sex', data=tips, palette='Set2', alpha=0.7, ax=ax2)
 
 # 서브 플롯의 제목 설정
-ax1.set_title('Strip Plot of Tips by Day and Gender')
-ax2.set_title('Swarm Plot of Tips by Day and Gender')
+ax1.set_title('Strip Plot of Tip by Day and Gender')
+ax2.set_title('Swarm Plot of Tip by Day and Gender')
 plt.savefig('./week04/Seaborn_Figure01.jpg')
 
 # **빈도 그래프**
@@ -53,7 +53,7 @@ fig = plt.figure(figsize=(15, 5))
 ax1 = fig.add_subplot(1, 2, 1)
 ax2 = fig.add_subplot(1, 2, 2)
 
-# 산점도 선형 회귀선 표시(fit_reg=True)
+# 산점도에 선형 회귀선 표시(fit_reg=True)
 sns.regplot(x='total_bill', y='tip', data=tips, color='blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'}, ax=ax1)
 
 # 산점도에 선형 회귀선 미표시(fit_reg=False)
