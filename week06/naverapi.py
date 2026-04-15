@@ -2,6 +2,6 @@
 import urllib.request
 import datatime
 import json
-import pandas as pd
 
-ServiceKey = ""
+client_id = 'n506YF7IGfKX0YbK3Bie'
+client_secret = ''
