@@ -4,4 +4,8 @@ import datatime
 import json
 
 client_id = 'n506YF7IGfKX0YbK3Bie'
-client_secret = ''
+client_secret = 'KqZGEJRtqQ'
+
+def main():
+
+    node = 'news'
