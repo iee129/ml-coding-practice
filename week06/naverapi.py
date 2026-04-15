@@ -1,6 +1,6 @@
 # -*- coding: uft-8 -*-
 import urllib.request
-import datatime
+import datetime
 import json
 
 client_id = 'n506YF7IGfKX0YbK3Bie'
@@ -14,4 +14,10 @@ def main():
     cnt = 0
     jsonResult = []
 
-    jsonResponse = getNaverSearch(node, srcTextm, 1, 100)      #
+    jsonResponse = getNaverSearch(node, srcText, 1, 100)      # [CODE 2]
+    total = jsonResponse['total']
+
+    while ((jsonResponse != None) and (jsonResponse['display'] != 0)):
+        for post in jsonResponse['items']:
+            cnt += 1
+            getPostData(post, jsonResult, cnt)
