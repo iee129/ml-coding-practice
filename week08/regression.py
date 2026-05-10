@@ -76,3 +76,15 @@ y_new = lin_reg.predict(X_new_poly)
 plt.figure(figsize=(6, 4))
 plt.plot(X, y, "b.")
 plt.plot(X_new, y_new, "r-", linewidth=2, label="Predictions")
+plt.xlabel("$x_1$")
+plt.ylabel("$y$", rotation=0)
+plt.legend(loc="upper left")
+plt.axis([-3, 3, 0, 10])
+plt.grid()
+plt.show()
+
+# 릿지 회귀
+
+np.random.seed(42)
+m = 20
+X = 3 * np.random
