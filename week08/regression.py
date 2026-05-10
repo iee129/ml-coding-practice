@@ -89,7 +89,7 @@ np.random.seed(42)
 m = 20
 X = 3 * np.random.rand(m, 1)
 y = 1 + 0.5 * X + np.random.randn(m, 1) / 1.5
-X_new = np,linspace(0, 3, 100).reshape(100, 1)
+X_new = np.linspace(0, 3, 100).reshape(100, 1)
 
 # 방금 생성한 데이터셋을 간단히 살펴보기
 plt.figure(figsize=(6, 4))
@@ -160,7 +160,7 @@ print(log_reg.predict([[1.7], [1.5]]))
 
 X = iris.data[["petal length (cm)", "petal width (cm)"]].values
 y = iris["target"]
-X_trainm, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 
 softmax_reg = LogisticRegression(C=30, random_state=42)
 softmax_reg.fit(X_train, y_train)
