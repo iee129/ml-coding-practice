@@ -120,3 +120,4 @@ plt.show()
 from sklearn.cluster import DBSCAN
 from sklearn.datasets import make_moons
 
+X, y = make_moons(n_samples=1000,)
